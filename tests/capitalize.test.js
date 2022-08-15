@@ -1,10 +1,9 @@
 const capitalize = require('./../src/capitalize')
+const assert =  require('assert');
 
-if (capitalize.capitalize('') !== '') {
-  throw new Error('error >> "" ')
-}
 
-if (capitalize.capitalize('helo') !== 'Helo') {
-  throw new Error('does not work')
-}
+assert.equal(capitalize.capitalize(''), '');
+
+assert.equal(capitalize.capitalize('helo'), 'Helo');
+
 console.log('its ok');
